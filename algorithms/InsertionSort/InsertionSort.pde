@@ -22,20 +22,27 @@ originalmente se encontraban desordenadas en la mesa.
 // MODIFY THESE TWO VALUES ONLY:
 // If you want to see the process slowly, try with a few bars
 // and a long delay time.
+
+// MODIFICA SOLAMENTE ESTOS DOS VALORES:
+// Si deseas observar el proceso lentamente, intenta usar pocas
+// barras y un tiempo de retardo mayor.
 int numBars = 100;
 int delayTime = 100;
 
 
-Bar[] bar;
-boolean inOrder;
-int sortedIndex = 0;
+Bar[] bar;            // Elements int the array
+int sortedIndex = 0;  // Elements already sorted
 
 void setup()
 {
+  // Define the size of the screen
   size(640, 480);
   
+  // The width of the bars depends on the number of bars
+  // and the width of the screen
   float barWidth = float(width) / numBars;
   
+  // Create the array of elements to be sorted
   bar = new Bar[numBars];
   for(int i=0; i<numBars; i++)
   {
